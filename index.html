@@ -63,6 +63,11 @@
             opacity: 0.6;
         }
 
+        .landing-text-container {
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(5px);
+        }
+
         .bg-image-1 {
             position: absolute;
             z-index: -1;
@@ -70,11 +75,10 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('./images/bg-3.png');
+            background-image: url('./images/bg-9.png');
             background-size: cover;
             background-position: center;
             height: 100vh;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
         }
 
         .nav-bar {
@@ -227,31 +231,32 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-24 pb-12 md:pt-32 md:pb-20 text-white">
-        <div class="bg-image-1"></div>
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <h1 class="text-3xl md:text-5xl font-bold mb-4">IRIS 2025</h1>
-                    <h2 class="text-xl md:text-2xl mb-6 ieee-gold-text">Insightful Reflection in Signal Processing</h2>
-                    <p class="text-lg mb-6">November 7-9, 2025 | Hybrid Mode</p>
-                    <p class="text-lg mb-8">Thiruvananthapuram, Kerala, India</p>
+    <section class="pt-24 pb-12 md:pt-32 md:pb-20 text-white" style="position: relative;">
+    <div class="bg-image-1"></div>
 
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#register" class="btn-primary px-6 py-3 rounded-md font-bold text-center">Register
-                            Now</a>
-                        <a href="#about"
-                            class="bg-transparent border-2 border-white px-6 py-3 rounded-md font-bold text-center hover:bg-white hover:text-gray-800 transition duration-300">Learn
-                            More</a>
-                    </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
+    <div class="container mx-auto px-4 relative z-10"> <div class="flex flex-col md:flex-row items-center">
+            <div class="landing-text-container md:w-1/2 mb-8 md:mb-0 p-8 rounded-2xl backdrop-blur-md border border-white/20 shadow-xl">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-md">IRIS 2025</h1>
+                <h2 class="text-xl md:text-2xl mb-6 text-blue-300 drop-shadow-md">Insightful Reflection in Signal Processing</h2>
+                <p class="text-lg mb-2 drop-shadow-md">November 7-9, 2025 | Hybrid Mode</p>
+                <p class="text-lg mb-6 drop-shadow-md">Thiruvananthapuram, Kerala, India</p>
 
-                    <img src="./images/start.svg" alt="IRIS 2025 Event" class="rounded-lg">
+                <div class="flex flex-wrap gap-4">
+                    <a href="#register"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold transition duration-300 shadow-md">Register Now</a>
+                    <a href="#about"
+                        class="bg-white text-gray-800 px-6 py-3 rounded-md font-bold transition duration-300 shadow-md hover:bg-gray-200">Learn More</a>
                 </div>
             </div>
+
+            <div class="md:w-1/2 flex justify-center">
+                <img src="./images/start-2.svg" alt="IRIS 2025 Event"
+                    class="rounded-lg max-w-full h-auto">
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Countdown Timer -->
     <section class="py-8">
@@ -1063,6 +1068,8 @@
     </footer>
 
     <!-- JavaScript -->
+    <script
+        type='text/javascript'>document.addEventListener('DOMContentLoaded', function () { window.setTimeout(document.querySelector('svg').classList.add('animated'), 1000); })</script>
     <script>
         // Mobile Menu Toggle
         document.getElementById('menu-toggle').addEventListener('click', function () {
